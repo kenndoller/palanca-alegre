@@ -18,12 +18,12 @@ def send_email():
         # Set up the server
         server = smtplib.SMTP(host='smtp.gmail.com', port=587)
         server.starttls()
-        server.login('asilakon.palanca@gmail.com', 'ywcu kfzr gffm qxik')
+        server.login('alegrezrc.palanca@gmail.com', 'alegrethebest?')
 
         # Create the email
         msg = MIMEMultipart()
 
-        msg['From'] = 'Kwago ng BenteKwatro'
+        msg['From'] = 'Alegre BenteSingko'
         msg['To'] = recipient
         msg['Subject'] = '🦉⭐️ Hoot Hoot! You’ve Got Mail!'
         
