@@ -34,7 +34,7 @@ def send_email():
                 <p style="padding: 12px; border-left: 4px solid #d0d0d0; font-style: italic;"><span style="font-family: 'book antiqua', palatino, serif;">{message}</span></p>
                 <p>&nbsp;</p>
                 <p><span style="font-family: 'book antiqua', palatino, serif;">Get more messages by sharing the link!</span></p>
-                <p><span style="font-family: 'book antiqua', palatino, serif;">Padayon, Asilakon ☝️</span></p>
+                <p><span style="font-family: 'book antiqua', palatino, serif;">Padayon, Alegre ☝️</span></p>
             </body>
         '''
 
