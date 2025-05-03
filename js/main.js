@@ -156,7 +156,7 @@ function update_profile(section, code, name, quote, email) {
         <textarea placeholder="Sender (or Codename)" id="sender" wrap="hard" maxlength="50"></textarea>
         <textarea placeholder="Leave me a message!" id="txtbox" wrap="hard"></textarea>
         ${button_content}
-        <div class="note">Note: Messages will be sent from <b>Asilakon Palanca's custom email address</b> to keep the sender anonymous. If you wish a reply from the recipient, you may include your contact info in your message.</div>
+        <div class="note">Note: Messages will be sent from <b>Alegre's custom email address</b> to keep the sender anonymous. If you wish a reply from the recipient, you may include your contact info in your message.</div>
     </div>
     `
     container.innerHTML += new_card;
