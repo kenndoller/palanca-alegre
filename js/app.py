@@ -18,7 +18,7 @@ def send_email():
         # Set up the server
         server = smtplib.SMTP(host='smtp.gmail.com', port=587)
         server.starttls()
-        server.login('alegrezrc.palanca@gmail.com', 'alegrethebest?')
+        server.login('alegrezrc.palanca@gmail.com', 'uwqp zugf qhpo hzjz')
 
         # Create the email
         msg = MIMEMultipart()
