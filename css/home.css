@@ -133,8 +133,8 @@ header .navbar {
 #alegre_title {
     position: absolute;
     font-weight:900;
-    font-size: 500%;
-    font-family: "Patua One", serif;
+    font-size: 5vw;
+    font-family: Ubuntu;
     color: white;
     margin-top: -48%;
     margin-left: 9%;
