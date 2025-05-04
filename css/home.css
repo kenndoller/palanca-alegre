@@ -34,6 +34,16 @@ header .navbar {
     padding: 10px;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    top: -100px; 
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    transition: top 1.5s ease;
+}
+
+.navbar.slide-in {
+    top: 0;
 }
 
 .navbar .navbar-menu {
@@ -110,11 +120,43 @@ header .navbar {
     }
 }
 
+.section_picture {
+    max-width: 40%;
+}
+
+#upper {
+    max-width: 100%;
+}
+
 /* Title */
 
 #alegre_title {
+    position: absolute;
     font-weight:900;
-    font-size: xx-large; 
+    font-size: 500%;
+    font-family: "Patua One", serif;
+    color: white;
+    margin-top: -48%;
+    margin-left: 9%;
+    z-index: 100;
+    opacity: 0;
+    transform: translateY(30px); 
+    transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+#alegre_title.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.group_picture-wrapper {
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+  }
+  
+
+.group_picture-wrapper.visible {
+    opacity: 1;
 }
 
 .section_name_front {
@@ -140,3 +182,124 @@ header .navbar {
     transition: 0.3s ease;
     line-height: 2.5vb;
 }
+
+.alegre-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 50vh; 
+    margin-top: 4%;
+}
+
+.alegre-wrapper img {
+    max-width: 200px;
+    margin-left: 45%;
+}
+
+.cap-body, .iska-cap {
+    position: absolute;
+    will-change: transform;
+}
+
+#curie-photo {
+    margin-left: 10%;
+}
+
+#curie-page {
+    padding: -20% 0 10%;
+    gap: 2rem;             
+    padding: 2rem;
+    flex-wrap: wrap; 
+    display: flex;
+    max-width: 100%;
+}
+
+#einstein-photo {
+    margin-left: 10%;
+}
+
+#einstein-page {
+    padding: 20% 0 10%;
+    gap: 2rem;             
+    padding: 2rem;
+    flex-wrap: wrap; 
+    display: flex;
+}
+
+#tesla-photo {
+    margin-left: 10%;
+}
+
+#tesla-page {
+    padding: 20% 0 10%;
+    gap: 2rem;             
+    padding: 2rem;
+    flex-wrap: wrap; 
+    display: flex;
+}
+
+.section_name {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;  
+    gap: 1rem;
+  }
+  
+  .section_name_front {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .view_students {
+    background-color: #007bff;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+.section_name_front {
+    text-align: center;
+}
+
+
+.section_name_msg {
+    max-width: 80%;
+}
+
+.view_students {
+    margin: 0 20% 0;
+}
+
+.alegre-message {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    height: 100vh;
+    margin-top: -20%;          
+  }
+  
+.message-insp {
+    max-width: 70%;
+    font-size: 230%;
+    text-align: center;
+}
+
+.sparkle-hover {
+    position: relative;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    cursor: pointer;
+    animation: shimmer 3s infinite linear;
+    background: linear-gradient(90deg, rgb(219, 225, 255), #07076b, rgb(162, 176, 251));
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  @keyframes shimmer {
+    0% { background-position: 200% center; }
+    100% { background-position: -200% center; }
+  }
