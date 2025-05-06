@@ -429,3 +429,36 @@ header .navbar {
     z-index: 0;
     margin-top: 10vh;
 }
+
+.cards-play-sub {
+    position: relative;
+    width: 300px; 
+    height: 400px;
+    margin: auto;
+    perspective: 1000px;
+  }
+  
+  .card-img {
+    --gap: 15px;
+    --rotate: 10deg;
+  
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    transition: transform 0.5s ease, z-index 0.5s;
+    transform-origin: bottom center;
+    transform: rotate(calc((var(--i) - 1) * var(--rotate)))
+               translateY(calc((1 - var(--i)) * var(--gap)));
+    z-index: calc(3 - var(--i));
+  }
+  
+  .cards-play-sub:hover .card-img {
+    transform: rotate(0deg)
+               translateY(0)
+               translateX(calc((var(--i) - 1) * 60px));
+    z-index: var(--i);
+  }
+  
