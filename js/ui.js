@@ -163,7 +163,7 @@ gsap.to(".gem-2", {
     scrollTrigger: {
       trigger: "#tesla-page",
       start: "bottom center",
-      end: "bottom+=30% center",                  /* PLS FIX YAWA WHY DOESNT THE GRADIENT GO AWAY AFTER TESLA HUHUHU */
+      end: "+=300",                  /* PLS FIX YAWA WHY DOESNT THE GRADIENT GO AWAY AFTER TESLA HUHUHU */
       scrub: true
     }
     });
@@ -207,7 +207,7 @@ ease: "power2.out",
 scrollTrigger: {
     trigger: ".alegre-message ",
     start: "center", 
-    end: ".tesla-page",
+    end: "+=300",
     scrub: true,           
     toggleActions: "play none none none"
 }
