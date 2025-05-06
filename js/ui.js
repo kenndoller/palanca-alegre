@@ -157,16 +157,16 @@ gsap.fromTo(".gem-2",
 }
 );
 
-gsap.to(".gem-2 ", {
-opacity: 0,
-ease: "power1.inOut",
-scrollTrigger: {
-  trigger: "#tesla-page",
-  start: "bottom center",
-  end: "bottom+=30% center",
-  scrub: true
-}
-});
+gsap.to(".gem-2", {
+    opacity: 0,
+    ease: "power1.inOut",
+    scrollTrigger: {
+      trigger: "#tesla-page",
+      start: "bottom center",
+      end: "bottom+=30% center",                  /* PLS FIX YAWA WHY DOESNT THE GRADIENT GO AWAY AFTER TESLA HUHUHU */
+      scrub: true
+    }
+    });
 
 gsap.to(".gem", {
   y: (i) => [-100, -150, 200, 250][i],       
