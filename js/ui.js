@@ -186,7 +186,7 @@ gsap.to(".gem", {
 gsap.to(".gem-1", {
 y: (i) => [-100, -150, 200, 250][i],       
 scale: 3,                                   
-filter: "blur(14px)",                       
+filter: "blur(7px)",                       
 duration: 2,
 ease: "power2.out",
 scrollTrigger: {
@@ -212,3 +212,5 @@ scrollTrigger: {
     toggleActions: "play none none none"
 }
 });
+
+
