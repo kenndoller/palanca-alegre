@@ -206,7 +206,7 @@ duration: 2,
 ease: "power2.out",
 scrollTrigger: {
     trigger: ".alegre-message ",
-    start: "center", 
+    start: "bottom center", 
     end: "+=300",
     scrub: true,           
     toggleActions: "play none none none"
