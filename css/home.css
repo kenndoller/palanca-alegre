@@ -430,6 +430,10 @@ header .navbar {
     margin-top: 10vh;
 }
 
+.cards-play {
+    margin-left: -100vh;
+}
+
 .cards-play-sub {
     position: relative;
     width: 300px; 
@@ -458,7 +462,7 @@ header .navbar {
   .cards-play-sub:hover .card-img {
     transform: rotate(0deg)
                translateY(0)
-               translateX(calc((var(--i) - 1) * 60px));
+               translateX(calc((var(--i) - 1) * 200px));
     z-index: var(--i);
   }
   
