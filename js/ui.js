@@ -163,7 +163,7 @@ gsap.to(".gem-2", {
     scrollTrigger: {
       trigger: "#tesla-page",
       start: "bottom center",
-      end: "+=300",                  /* PLS FIX YAWA WHY DOESNT THE GRADIENT GO AWAY AFTER TESLA HUHUHU */
+      end: "+=300",                 
       scrub: true
     }
     });
