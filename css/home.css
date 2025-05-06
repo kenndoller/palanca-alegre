@@ -133,8 +133,8 @@ header .navbar {
 #alegre_title {
     position: absolute;
     font-weight:900;
-    font-size: 5vw;
-    font-family: Ubuntu;
+    font-size: 500%;
+    font-family: "Patua One", serif;
     color: white;
     margin-top: -48%;
     margin-left: 9%;
@@ -218,7 +218,7 @@ header .navbar {
 }
 
 #einstein-page {
-    padding: 20% 0 10%;
+    padding: 40% 0 10%;
     gap: 2rem;             
     padding: 2rem;
     flex-wrap: wrap; 
@@ -245,12 +245,12 @@ header .navbar {
     gap: 1rem;
   }
   
-  .section_name_front {
+.section_name_front {
     font-size: 2rem;
     font-weight: bold;
-  }
+}
   
-  .view_students {
+.view_students {
     background-color: #007bff;
     color: white;
     padding: 0.5rem;
@@ -303,3 +303,129 @@ header .navbar {
     0% { background-position: 200% center; }
     100% { background-position: -200% center; }
   }
+
+  .sparkle-hover-1 {
+    position: relative;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    cursor: pointer;
+    animation: shimmer 3s infinite linear;
+    background: linear-gradient(90deg, rgb(241, 255, 219), #1e6b07, rgb(168, 251, 162));
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  @keyframes shimmer {
+    0% { background-position: 200% center; }
+    100% { background-position: -200% center; }
+  }
+
+  .sparkle-hover-2 {
+    position: relative;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    cursor: pointer;
+    animation: shimmer 3s infinite linear;
+    background: linear-gradient(90deg, rgb(248, 255, 219), #d0c307, rgb(251, 248, 162));
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  @keyframes shimmer {
+    0% { background-position: 200% center; }
+    100% { background-position: -200% center; }
+  }
+
+.section {
+    margin-bottom: 30rem; 
+}
+
+.alegre-gradient {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.alegre-gradient-1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.alegre-gradient-2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.gem {
+    position: absolute;
+    width: 20vh;
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0) scale(1);
+    transition: ease-in 0.1s; 
+}
+
+.gem-1 {
+    position: absolute;
+    width: 20vh;
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0) scale(1);
+    transition: ease-in 0.1s; 
+    z-index: 3;
+}
+
+.gem-2 {
+    position: absolute;
+    width: 20vh;
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0) scale(1);
+    transition: ease-in 0.1s;
+    z-index: 4; 
+}
+
+.gem:nth-child(1) { top: 30%; left: 10%; }
+.gem:nth-child(2) { top: 30%; left: 60%; }
+.gem:nth-child(3) { top: 40%; left: 30%; }
+.gem:nth-child(4) { top: 30%; left: 80%; }
+
+.gem-1:nth-child(1) { top: 30%; left: 30%; }
+.gem-1:nth-child(2) { top: 90%; left: 10%; }
+.gem-1:nth-child(3) { top: -10%; left: 70%; }
+.gem-1:nth-child(4) { top: 30%; left: 80%; }
+
+.gem-2:nth-child(1) { top: 50%; left: 30%; }
+.gem-2:nth-child(2) { top: 30%; left: 30%; }
+.gem-2:nth-child(3) { top: 50%; left: 10%; }
+.gem-2:nth-child(4) { top: 30%; left: 80%; }
+
+.content {
+    position: relative;
+    z-index: 0;
+    margin-top: 10vh;
+}
