@@ -145,7 +145,7 @@ function update_profile(section, code, name, quote, email) {
         <span class="prev-next">
             <button id="back" onclick="back_tosections()">Back</button>
         </span>
-        <img class="photo" src="../media/images/${section}/${code}.webp" alt="image">
+        <img class="photo" src="../media/images/sections/${section}/${code}.webp" alt="image">
         
         <span class="name"><span id="surname">${namelist[0].trim()}, </span>${namelist[1].trim()}</span>
         
