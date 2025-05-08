@@ -213,4 +213,41 @@ scrollTrigger: {
 }
 });
 
+/* javascript of tarot cards*/
+
+document.addEventListener('DOMContentLoaded', () => {
+  const slide = document.querySelector('.prophecy-slide');
+  const cards = document.querySelectorAll('.tarot-cards .img-tarots');
+
+  // Define unique movement patterns for each card
+  const movementSettings = [
+    { x: -20, y: 80, r: -5 },
+    { x: 10, y: 60, r: 6 },
+    { x: -5, y: 100, r: -3 },
+    { x: 15, y: 70, r: 8 },
+    { x: -10, y: 90, r: -7 },
+  ];
+
+  function updateScrollEffect() {
+    const rect = slide.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    const start = windowHeight;
+    const end = -windowHeight;
+    const progress = Math.min(Math.max((start - rect.top) / (start - end), 0), 1);
+
+    cards.forEach((card, i) => {
+      const { x, y, r } = movementSettings[i];
+      const translateX = 15 + x * (1 - progress); // preserve base 15% + variation
+      const translateY = y * (1 - progress);
+      const rotate = r * (1 - progress);
+
+      card.style.transform = `translate(${translateX}%, ${translateY}%) rotate(${rotate}deg)`;
+    });
+
+    requestAnimationFrame(updateScrollEffect);
+  }
+
+  requestAnimationFrame(updateScrollEffect);
+});
 
