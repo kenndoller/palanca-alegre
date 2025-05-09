@@ -236,7 +236,7 @@ scrollTrigger: {
 
 gsap.to(".gem-2", {
 y: (i) => [-100, -150, 200, 250][i],       
-scale: 3,                                   
+scale: 2,                                   
 filter: "blur(2px)",                       
 duration: 2,
 ease: "power2.out",
