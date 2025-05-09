@@ -60,6 +60,42 @@ gsap.to("#alegre_title", {
   }
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const slide = document.querySelector('.puzzles-slide');
+  const pieces = document.querySelectorAll('.puzzle-pieces .img-pieces');
+
+  // Each piece gets a unique motion pattern
+  const motion = [
+    { x: -50, y: 100, r: -10 },
+    { x: 60, y: 80, r: 12 },
+    { x: -30, y: 120, r: -6 },
+    { x: 45, y: 90, r: 8 }
+  ];
+
+  function animatePuzzlePieces() {
+    const rect = slide.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    const start = windowHeight;
+    const end = -windowHeight;
+
+    const progress = Math.min(Math.max((start - rect.top) / (start - end), 0), 1);
+
+    pieces.forEach((piece, i) => {
+      const { x, y, r } = motion[i];
+      const translateX = x * (1 - progress);
+      const translateY = y * (1 - progress);
+      const rotate = r * (1 - progress);
+      piece.style.transform = `translate(${translateX}%, ${translateY}%) rotate(${rotate}deg)`;
+    });
+
+    requestAnimationFrame(animatePuzzlePieces);
+  }
+
+  requestAnimationFrame(animatePuzzlePieces);
+});
+
+
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.to("#cap", {
@@ -186,7 +222,7 @@ gsap.to(".gem", {
 gsap.to(".gem-1", {
 y: (i) => [-100, -150, 200, 250][i],       
 scale: 3,                                   
-filter: "blur(7px)",                       
+filter: "blur(2px)",                       
 duration: 2,
 ease: "power2.out",
 scrollTrigger: {
@@ -201,7 +237,7 @@ scrollTrigger: {
 gsap.to(".gem-2", {
 y: (i) => [-100, -150, 200, 250][i],       
 scale: 3,                                   
-filter: "blur(3px)",                       
+filter: "blur(2px)",                       
 duration: 2,
 ease: "power2.out",
 scrollTrigger: {
@@ -238,7 +274,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     cards.forEach((card, i) => {
       const { x, y, r } = movementSettings[i];
-      const translateX = 15 + x * (1 - progress); // preserve base 15% + variation
+      const translateX = 15 + x * (1 - progress); 
       const translateY = y * (1 - progress);
       const rotate = r * (1 - progress);
 

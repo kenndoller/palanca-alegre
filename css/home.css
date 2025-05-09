@@ -127,7 +127,64 @@ header .navbar {
 
 #upper {
     max-width: 100%;
+    position: absolute;
+    z-index: 99;
 }
+
+.puzzles-slide {
+    position: relative;
+    height: 120vh;
+    overflow: hidden;
+  }
+  
+  .puzzles-slide-sub {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 100; 
+    pointer-events: none;
+  }
+
+  .puzzle-pieces {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 109; 
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    margin-top: 30%;
+    margin-left: 50%;
+  }
+  
+  .img-pieces {
+    position: absolute; 
+    z-index: 107;
+    width: 150px;
+    height: auto;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2));
+  }
+  .img-pieces:nth-child(1) {
+   
+    left: 30%;
+  }
+  
+  .img-pieces:nth-child(2) {
+    
+    left: -40%;
+  }
+  
+  .img-pieces:nth-child(3) {
+    
+    left: 40%;
+  }
+  
+  .img-pieces:nth-child(4) {
+   
+    left: -50%;
+  }
 
 /* Title */
 
@@ -136,13 +193,15 @@ header .navbar {
     font-weight:900;
     font-size: 500%;
     font-family: "Patua One", serif;
-    color: white;
-    margin-top: -48%;
-    margin-left: 9%;
-    z-index: 100;
+    color: rgb(255, 255, 255);
+    margin-top: 0%;
+    margin-left: 12%;
+    max-width: 80%;
+    z-index: 105;
     opacity: 0;
     transform: translateY(30px); 
     transition: opacity 1.5s ease, transform 1.5s ease;
+    text-align: center;
 }
 
 #alegre_title.animate-in {
@@ -423,9 +482,9 @@ header .navbar {
 .gem-1:nth-child(3) { top: -10%; left: 70%; }
 .gem-1:nth-child(4) { top: 30%; left: 80%; }
 
-.gem-2:nth-child(1) { top: 50%; left: 30%; }
+.gem-2:nth-child(1) { top: 35%; left: 30%; }
 .gem-2:nth-child(2) { top: 30%; left: 60%; }
-.gem-2:nth-child(3) { top: 50%; left: 10%; }
+.gem-2:nth-child(3) { top: 45%; left: 10%; }
 .gem-2:nth-child(4) { top: 30%; left: 80%; }
 
 .content {
@@ -504,23 +563,19 @@ header .navbar {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    z-index: -1;
+    z-index: 500000;
   }
   
   #gradient-3-4-5 {
     width: 100%;
     height: 100%;
     object-fit: cover; 
-    opacity: 0.9;       
+    opacity: 1;       
     pointer-events: none;
   }
 
 
   /* layers for prophecy*/
-
-.prophecy-slide {
-    margin-top: 150vh;
-}
 
  .img-tarots {
     max-width: 200px;
@@ -532,9 +587,10 @@ header .navbar {
  }
 
  .prophecy-slide {
+    margin-top: 40vh;
     position: relative;
-    height: 200vh; 
-    overflow: hidden;
+    height: 100vh; 
+
   }
   
   .prophecy-slide-sub {
@@ -542,6 +598,26 @@ header .navbar {
     top: 0;
     height: 100vh;
     width: 100%;
+    margin-bottom: -200vh;
+  }
+
+  .prophecy-slide-sub .gradient-layer-ko {
+    object-fit: cover;
+    height: 800vh;
+    max-width: 100%;
+    margin-top: -500vh;
+    z-index: -10000;
+  }
+
+  .gradient-layer-ko {
+    position: absolute;
+    top: -50%;          /* Pulls the image upward to show the top part */
+    height: 200%;       /* Extends the image taller so it doesn't get cropped */
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+    z-index: 70;        /* Just below other upper layers */
+    pointer-events: none;
   }
   
   .upper {
@@ -550,7 +626,7 @@ header .navbar {
     height: 100%;
     top: 0;
     left: 0;
-    z-index: 71; 
+    z-index: 71;
   }
   
   .img-layer {
@@ -566,7 +642,7 @@ header .navbar {
   /* Tarot Cards Layer */
   .tarot-cards {
     position: relative;
-    transform: translateX(15%);
+    transform: translateX(13%);
     z-index: 90;
     display: flex;
     gap: 1rem;
