@@ -655,9 +655,16 @@ header .navbar {
     width: 200px;
     height: auto;
   }
-  
+
+  .prophecy-slide-sub > img.img-layer:nth-child(2) {
+    z-index: 75;
+    width: 100vw;
+    transform: translateY(-15%);
+  }
+
   .prophecy-slide-sub > img.img-layer:last-child {
     z-index: 75;
   }
+  
   
   
