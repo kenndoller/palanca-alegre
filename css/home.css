@@ -191,7 +191,7 @@ header .navbar {
 #alegre_title {
     position: absolute;
     font-weight:900;
-    font-size: 500%;
+    font-size: clamp(1.5rem, 6vw, 4rem);
     font-family: "Patua One", serif;
     color: rgb(255, 255, 255);
     margin-top: 0%;
