@@ -1,0 +1,670 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background:#fffdee;
+    overflow-x: hidden;
+}
+ul {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+/* Header */
+header {
+    background: #1a5d94;
+}
+
+header .navbar {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: -100px; 
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    transition: top 1.5s ease;
+}
+
+.navbar.slide-in {
+    top: 0;
+}
+
+.navbar .navbar-menu {
+    display: flex;
+    margin-right: 10px;
+    gap: 10px;
+
+}
+
+.navbar .navbar-item {
+    padding: 10px 18px;
+    color: white;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: 0.3s ease;
+}
+
+.navbar .navbar-item:hover {
+    color: darkblue;
+    background: lightyellow;
+}
+
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding-right: 30px;
+}
+
+.navbar-toggle .bar {
+    width: 25px;
+    border-radius: 2px;
+    height: 3px;
+    background-color: #fff;
+    margin: 2.5px 0;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .navbar-menu {
+        flex-direction: column;
+        padding-top: 50px;
+        position: absolute;
+        top: 0px;
+        left: -100%;
+        width: 40%;
+        height: 100vh;
+        background-color: lightblue;
+        transition: left 0.4s;
+        overflow: hidden;
+    }
+
+
+    .navbar-brand .logo {
+        height: auto;
+        width: 80px;
+    }
+
+    .navbar-menu.active {
+        left: 0;
+        height: 100vh;
+    }
+
+    .navbar-toggle {
+        display: flex;
+    }
+
+    .navbar-menu li {
+        margin: 10px 0;
+    }
+
+    .navbar-menu a {
+        color: black;
+    }
+}
+
+.section_picture {
+    max-width: 40%;
+}
+
+#upper {
+    max-width: 100%;
+    position: absolute;
+    z-index: 99;
+}
+
+.puzzles-slide {
+    position: relative;
+    height: 120vh;
+    overflow: hidden;
+  }
+  
+  .puzzles-slide-sub {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 100; 
+    pointer-events: none;
+  }
+
+  .puzzle-pieces {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 109; 
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    margin-top: 30%;
+    margin-left: 50%;
+  }
+  
+  .img-pieces {
+    position: absolute; 
+    z-index: 107;
+    width: 150px;
+    height: auto;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2));
+  }
+  .img-pieces:nth-child(1) {
+   
+    left: 30%;
+  }
+  
+  .img-pieces:nth-child(2) {
+    
+    left: -40%;
+  }
+  
+  .img-pieces:nth-child(3) {
+    
+    left: 40%;
+  }
+  
+  .img-pieces:nth-child(4) {
+   
+    left: -50%;
+  }
+
+/* Title */
+
+#alegre_title {
+    position: absolute;
+    font-weight:900;
+    font-size: 500%;
+    font-family: "Patua One", serif;
+    color: rgb(255, 255, 255);
+    margin-top: 0%;
+    margin-left: 12%;
+    max-width: 80%;
+    z-index: 105;
+    opacity: 0;
+    transform: translateY(30px); 
+    transition: opacity 1.5s ease, transform 1.5s ease;
+    text-align: center;
+}
+
+#alegre_title.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.group_picture-wrapper {
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+  }
+  
+
+.group_picture-wrapper.visible {
+    opacity: 1;
+}
+
+.section_name_front {
+    font-weight: 500;
+    font-size: x-large;
+}
+
+.view_students {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 2vh;
+    text-align: center;
+
+    height: 5vh;
+    width: 20vw;
+    color: white;
+    background-color:#1a5d94;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: 0.3s ease;
+    line-height: 2.5vb;
+}
+
+.alegre-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 50vh; 
+    margin-top: 4%;
+}
+
+.alegre-wrapper img {
+    max-width: 200px;
+    margin-left: 45%;
+}
+
+.cap-body, .iska-cap {
+    position: absolute;
+    will-change: transform;
+}
+
+#curie-photo {
+    margin-left: 10%;
+}
+
+#curie-page {
+    scroll-behavior: smooth;
+    padding: -20% 0 10%;
+    gap: 2rem;             
+    padding: 2rem;
+    flex-wrap: wrap; 
+    display: flex;
+    max-width: 100%;
+}
+
+#einstein-photo {
+    margin-left: 10%;
+}
+
+#einstein-page {
+    scroll-behavior: smooth;
+    padding: 40% 0 10%;
+    gap: 2rem;             
+    padding: 2rem;
+    flex-wrap: wrap; 
+    display: flex;
+}
+
+#tesla-photo {
+    margin-left: 10%;
+}
+
+#tesla-page {
+    scroll-behavior: smooth;
+    padding: 20% 0 10%;
+    gap: 2rem;             
+    padding: 2rem;
+    flex-wrap: wrap; 
+    display: flex;
+}
+
+.section_name {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;  
+    gap: 1rem;
+  }
+  
+.section_name_front {
+    font-size: 2rem;
+    font-weight: bold;
+}
+  
+.view_students {
+    background-color: #007bff;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+.section_name_front {
+    text-align: center;
+}
+
+
+.section_name_msg {
+    max-width: 80%;
+}
+
+.view_students {
+    margin: 0 20% 0;
+}
+
+.alegre-message {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    height: 100vh;
+    margin-top: -20%;          
+  }
+  
+.message-insp {
+    max-width: 70%;
+    font-size: 230%;
+    text-align: center;
+}
+
+.sparkle-hover {
+    position: relative;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    cursor: pointer;
+    animation: shimmer 3s infinite linear;
+    background: linear-gradient(90deg, rgb(219, 225, 255), #07076b, rgb(162, 176, 251));
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  @keyframes shimmer {
+    0% { background-position: 200% center; }
+    100% { background-position: -200% center; }
+  }
+
+  .sparkle-hover-1 {
+    position: relative;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    cursor: pointer;
+    animation: shimmer 3s infinite linear;
+    background: linear-gradient(90deg, rgb(241, 255, 219), #1e6b07, rgb(168, 251, 162));
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  @keyframes shimmer {
+    0% { background-position: 200% center; }
+    100% { background-position: -200% center; }
+  }
+
+  .sparkle-hover-2 {
+    position: relative;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    cursor: pointer;
+    animation: shimmer 3s infinite linear;
+    background: linear-gradient(90deg, rgb(248, 255, 219), #d0c307, rgb(251, 248, 162));
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  @keyframes shimmer {
+    0% { background-position: 200% center; }
+    100% { background-position: -200% center; }
+  }
+
+.section {
+    margin-bottom: 30rem; 
+}
+
+.alegre-gradient {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.alegre-gradient-1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.alegre-gradient-2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.gem {
+    position: absolute;
+    width: 20vh;
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0) scale(1);
+    transition: ease-in 0.1s; 
+}
+
+.gem-1 {
+    position: absolute;
+    width: 20vh;
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0) scale(1);
+    transition: ease-in 0.1s; 
+    z-index: 3;
+}
+
+.gem-2 {
+    position: absolute;
+    width: 20vh;
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0) scale(1);
+    transition: ease-in 0.1s;
+    z-index: -15; 
+}
+
+.gem:nth-child(1) { top: 30%; left: 10%; }
+.gem:nth-child(2) { top: 30%; left: 60%; }
+.gem:nth-child(3) { top: 40%; left: 30%; }
+.gem:nth-child(4) { top: 30%; left: 80%; }
+
+.gem-1:nth-child(1) { top: 30%; left: 30%; }
+.gem-1:nth-child(2) { top: 90%; left: 10%; }
+.gem-1:nth-child(3) { top: -10%; left: 70%; }
+.gem-1:nth-child(4) { top: 30%; left: 80%; }
+
+.gem-2:nth-child(1) { top: 35%; left: 30%; }
+.gem-2:nth-child(2) { top: 30%; left: 60%; }
+.gem-2:nth-child(3) { top: 45%; left: 10%; }
+.gem-2:nth-child(4) { top: 30%; left: 80%; }
+
+.content {
+    position: relative;
+    z-index: 0;
+    margin-top: 10vh;
+}
+
+.cards-play {
+    margin-left: -100vh;
+}
+
+.cards-play-sub {
+    position: relative;
+    width: 300px; 
+    height: 400px;
+    margin: auto;
+    perspective: 1000px;
+  }
+  
+  .card-img {
+    --gap: 15px;
+    --rotate: 10deg;
+  
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    transition: transform 0.5s ease, z-index 0.5s;
+    transform-origin: bottom center;
+    transform: rotate(calc((var(--i) - 1) * var(--rotate)))
+               translateY(calc((1 - var(--i)) * var(--gap)));
+    z-index: calc(3 - var(--i));
+  }
+  
+  .cards-play-sub:hover .card-img {
+    transform: rotate(0deg)
+               translateY(0)
+               translateX(calc((var(--i) - 1) * 200px));
+    z-index: var(--i);
+  }
+
+.sparkle-hover-3 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;  
+    gap: 1rem;
+    margin-top: -50vh;
+    margin-left: 130vh;
+    margin-right: 20vh;
+    overflow: hidden;
+    z-index: -4;
+    position: relative;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    animation: shimmer 3s infinite linear;
+    background: linear-gradient(90deg, rgb(219, 225, 255), #07076b, rgb(162, 176, 251));
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  @keyframes shimmer {
+    0% { background-position: 200% center; }
+    100% { background-position: -200% center; }
+  } 
+  
+  .gradient-3-4 {
+    position: absolute;
+    margin-top: 80vh;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 500000;
+  }
+  
+  #gradient-3-4-5 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    opacity: 1;       
+    pointer-events: none;
+  }
+
+
+  /* layers for prophecy*/
+
+ .img-tarots {
+    max-width: 200px;
+    z-index: 74;
+ }
+
+ .img-layer {
+    max-width: 100vw;
+ }
+
+ .prophecy-slide {
+    margin-top: 40vh;
+    position: relative;
+    height: 100vh; 
+
+  }
+  
+  .prophecy-slide-sub {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    margin-bottom: -81vh;
+  }
+
+  .prophecy-slide-sub .gradient-layer-ko {
+    object-fit: cover;
+    height: 100vh;
+    max-width: 100%;
+    margin-top: -500vh;
+    z-index: -10000;
+  }
+
+  .gradient-layer-ko {
+    position: absolute;
+    top: -50%;          /* Pulls the image upward to show the top part */
+    height: 200%;       /* Extends the image taller so it doesn't get cropped */
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+    z-index: 70;        /* Just below other upper layers */
+    pointer-events: none;
+  }
+  
+  .upper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 71;
+  }
+  
+  .img-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+  }
+  
+  /* Tarot Cards Layer */
+  .tarot-cards {
+    position: relative;
+    transform: translateX(13%);
+    z-index: 90;
+    display: flex;
+    gap: 1rem;
+    pointer-events: none;
+  }
+  
+  .img-tarots {
+    width: 200px;
+    height: auto;
+  }
+
+  .prophecy-slide-sub > img.img-layer:nth-child(2) {
+    z-index: 75;
+    width: 100vw;
+    transform: translateY(-15%);
+  }
+
+  .prophecy-slide-sub > img.img-layer:last-child {
+    z-index: 75;
+  }
+  
+  
+  
