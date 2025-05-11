@@ -12,6 +12,11 @@ ul {
     list-style: none;
 }
 
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
 
 .logo {
     width: 100px;
