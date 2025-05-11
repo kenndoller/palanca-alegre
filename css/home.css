@@ -27,9 +27,13 @@ button {
 
 /* Header */
 header {
-    position:fixed;
-    background: #1a5d94;
+
     
+}
+header .navbar-brand {
+    display: flex;
+    z-index: 0;
+    top: 0;
 }
 
 header .navbar {
@@ -102,7 +106,7 @@ header .navbar {
 
     .navbar-brand .logo {
         height: auto;
-        width: 80px;
+        width: 40px;
     }
 
     .navbar-menu.active {
@@ -133,82 +137,32 @@ header .navbar {
 
 #upper {
     max-width: 100%;
-    position: absolute;
-    z-index: 99;
 }
-
-.puzzles-slide {
-    position: relative;
-    height: 120vh;
-    overflow: hidden;
-  }
-  
-  .puzzles-slide-sub {
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    width: 100%;
-    z-index: 100; 
-    pointer-events: none;
-  }
-
-  .puzzle-pieces {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 109; 
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    margin-top: 30%;
-    margin-left: 50%;
-  }
-  
-  .img-pieces {
-    position: absolute; 
-    z-index: 107;
-    width: 150px;
-    height: auto;
-    transition: transform 0.3s ease;
-    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2));
-  }
-  .img-pieces:nth-child(1) {
-   
-    left: 30%;
-  }
-  
-  .img-pieces:nth-child(2) {
-    
-    left: -40%;
-  }
-  
-  .img-pieces:nth-child(3) {
-    
-    left: 40%;
-  }
-  
-  .img-pieces:nth-child(4) {
-   
-    left: -50%;
-  }
 
 /* Title */
 
 #alegre_title {
     position: absolute;
-    font-weight:900;
-    font-size: clamp(1.5rem, 6vw, 4rem);
+    font-weight: 900;
+    font-size: 4vw;
     font-family: "Patua One", serif;
-    color: rgb(255, 255, 255);
-    margin-top: 0%;
-    margin-left: 12%;
-    max-width: 80%;
-    z-index: 105;
+    color: white;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
     opacity: 0;
-    transform: translateY(30px); 
     transition: opacity 1.5s ease, transform 1.5s ease;
     text-align: center;
+    padding: 1rem;
 }
+
+.group_picture img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
 
 #alegre_title.animate-in {
     opacity: 1;
@@ -218,23 +172,65 @@ header .navbar {
 .group_picture-wrapper {
     opacity: 0;
     transition: opacity 0.8s ease-in-out;
+    width: 100%;
   }
   
-#alegre-photo {
-    max-width: 100%;
-    position: absolute;
-    z-index: 99;
-}
 
 .group_picture-wrapper.visible {
     opacity: 1;
 }
-
-
 .section_name_front {
     font-weight: 500;
     font-size: x-large;
 }
+
+.group_picture-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    #alegre_title {
+        font-size: 6vw;
+        padding: 0.5rem;
+    }
+
+    .group_picture-wrapper {
+        height: 80vh;
+    }
+}
+
+.group_picture-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.group_picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.group_picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
 .view_students {
 
@@ -276,6 +272,12 @@ header .navbar {
     margin-left: 10%;
 }
 
+@media (max-width: 768px) {
+    #curie-photo {
+        margin-left: -10%; /* adjust as needed */
+    }
+}
+
 #curie-page {
     scroll-behavior: smooth;
     padding: -20% 0 10%;
@@ -290,6 +292,12 @@ header .navbar {
     margin-left: 10%;
 }
 
+@media (max-width: 768px) {
+    #einstein-photo {
+        margin-left: -10%; /* adjust as needed */
+    }
+}
+
 #einstein-page {
     scroll-behavior: smooth;
     padding: 40% 0 10%;
@@ -301,6 +309,12 @@ header .navbar {
 
 #tesla-photo {
     margin-left: 10%;
+}
+
+@media (max-width: 768px) {
+    #tesla-photo {
+        margin-left: -10%; /* adjust as needed */
+    }
 }
 
 #tesla-page {
@@ -505,7 +519,6 @@ header .navbar {
 .content {
     position: relative;
     z-index: 0;
-    margin-top: 10vh;
 }
 
 .cards-play {
@@ -597,10 +610,10 @@ header .navbar {
   
  .gradient-3-4 {
     position: relative;
-    top: 30vh;
+    top: -5vh;
     left: 0;
-    width: 100vw;
-    height: 110vh;
+    width: 110vw;
+    height: 100vh;
     overflow: hidden;
     z-index: 500000;
     display: flex;
@@ -610,8 +623,7 @@ header .navbar {
 }
 
 #gradient-3-4-5 {
-    height: auto;
-    max-height: 100%;
+    max-height: 160%;
     object-fit: contain;
     opacity: 1;
     pointer-events: none;
@@ -630,21 +642,6 @@ header .navbar {
         height: auto;
         object-fit: contain;
     }
-} 
-@media (max-width: 768px) {
-    .group_picture-wrapper {
-        width: auto;
-        height: 100vh;
-        overflow: hidden;
-        display: flex;
-    }
-
-    .group_picture {
-        height: auto;
-        width: auto;
-    }
-
-
 
     .content {
         padding: 20px;
@@ -683,6 +680,7 @@ header .navbar {
     max-width: 200px;
     z-index: 74;
     position: relative; /* needed for z-index */
+    margin-left: 2rem;
 }
 
 /* Mobile optimization */
@@ -708,31 +706,11 @@ header .navbar {
     top: 0;
     height: 100vh;
     width: 100%;
-    margin-bottom: -81vh;
 
     overflow-wrap: break-word;
     word-wrap: break-word;
     word-break: break-word;
     text-align: center;
-  }
-
-  .prophecy-slide-sub .gradient-layer-ko {
-    object-fit: cover;
-    height: 100vh;
-    max-width: 100%;
-    margin-top: -500vh;
-    z-index: -10000;
-  }
-
-  .gradient-layer-ko {
-    position: absolute;
-    top: -50%;          /* Pulls the image upward to show the top part */
-    height: 200%;       /* Extends the image taller so it doesn't get cropped */
-    width: 100%;
-    object-fit: cover;
-    opacity: 0.3;
-    z-index: 70;        /* Just below other upper layers */
-    pointer-events: none;
   }
   
   .upper {
@@ -759,7 +737,6 @@ header .navbar {
 /* Tarot Cards Layer */
 .tarot-cards {
     position: relative;
-    transform: translateX(5vw); /* Responsive offset */
     z-index: 90;
     display: flex;
     flex-wrap: wrap; /* Allow wrapping on small screens */
@@ -775,7 +752,7 @@ header .navbar {
 
 .prophecy-slide-sub > img.img-layer:nth-child(2) {
     z-index: 75;
-    width: 100vw;
+    width: 120vw;
     height: auto;
     max-height: 100vh;
     object-fit: contain;
@@ -789,6 +766,25 @@ header .navbar {
     object-fit: contain;
 }
 
-  
+.prophecy-slide, .gradient-3-4 {
+    width: 100vw;
+    overflow-x: hidden;
+}
 
+.prophecy-slide-sub, .gradient-3-4 img {
+    width: 100%;
+    display: block;
+}
+
+.img-layer, .img-tarots {
+    display: block;
+    width: 100%;
+}
+.prophecy-slide {
+    width: 100vw;
+    background-image: url('../media/images/layer-mountain.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
   
