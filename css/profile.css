@@ -124,7 +124,6 @@ header .navbar {
 /* Profile*/
 .card-container {
     margin: 0;
-    margin-top: 40px;
     width: 100%;
     height: auto;
     padding: 3em 0;
@@ -135,6 +134,11 @@ header .navbar {
     justify-content: center;
     gap: 4em 0;
 }
+
+@media (max-width: 768px) {
+    .card-container {
+        margin-top: 50px;
+    }}
 
 .card {
     width: 400px;
