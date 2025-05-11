@@ -122,7 +122,8 @@ header .navbar {
 }
 
 .section_picture {
-    max-width: 40%;
+    width: 40%;
+    height: auto;
 }
 
 #upper {
@@ -615,6 +616,52 @@ header .navbar {
         height: auto;
         object-fit: contain;
     }
+}
+
+@media (max-width: 768px) {
+
+    .group_picture-wrapper {
+        position: relative;
+        width: auto;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+    }
+
+    .group_picture {
+        height: auto;
+        width: auto;
+    }
+
+    .content {
+        padding: 20px;
+        height: auto;
+        margin-top: 60px;   
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    
+    .section {
+        margin-bottom: 80px;
+        display: flex;
+        flex-direction: column;
+        z-index: 2;
+    }
+
+    .section_picture {
+        margin-left: -5%;
+        width: 100%;
+        height: auto;
+    }
+
+
+    .section_name {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
 }
 
   /* layers for prophecy*/
