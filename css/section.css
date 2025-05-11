@@ -28,6 +28,7 @@ header {
     background: #1a5d94;;
     width: 100%;
     top: 0;
+    bottom: 5rem;
     position: fixed;
     z-index: 1000;
 }
