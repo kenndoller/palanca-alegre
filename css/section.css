@@ -22,6 +22,7 @@ ul {
 /* Header */
 header {
     background: #1a5d94;
+    margin-bottom: 1rem;
 }
 
 .navbar {
@@ -30,7 +31,7 @@ header {
     top: 0;
     position: fixed;
     z-index: 1000;
-    margin-bottom: 1rem;
+    
 }
 
 header .navbar {
