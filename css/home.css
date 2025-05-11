@@ -131,7 +131,8 @@ header .navbar {
 }
 
 .section_picture {
-    max-width: 40%;
+    width: 40%;
+    height: auto;
 }
 
 #upper {
@@ -271,6 +272,12 @@ header .navbar {
     margin-left: 10%;
 }
 
+@media (max-width: 768px) {
+    #curie-photo {
+        margin-left: -10%; /* adjust as needed */
+    }
+}
+
 #curie-page {
     scroll-behavior: smooth;
     padding: -20% 0 10%;
@@ -285,6 +292,12 @@ header .navbar {
     margin-left: 10%;
 }
 
+@media (max-width: 768px) {
+    #einstein-photo {
+        margin-left: -10%; /* adjust as needed */
+    }
+}
+
 #einstein-page {
     scroll-behavior: smooth;
     padding: 40% 0 10%;
@@ -296,6 +309,12 @@ header .navbar {
 
 #tesla-photo {
     margin-left: 10%;
+}
+
+@media (max-width: 768px) {
+    #tesla-photo {
+        margin-left: -10%; /* adjust as needed */
+    }
 }
 
 #tesla-page {
