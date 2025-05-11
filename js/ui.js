@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 })
 
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const section = document.querySelector(".group_picture-wrapper");
 

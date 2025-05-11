@@ -126,7 +126,6 @@ header .navbar {
 }
 
 #upper {
-    max-width: 100%;
     position: absolute;
     z-index: 99;
 }

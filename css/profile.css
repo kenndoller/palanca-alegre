@@ -29,6 +29,14 @@ header {
     background: #1a5d94;
 }
 
+.navbar {
+    background: #1a5d94;
+    width: 100%;
+    top: 0;
+    position:fixed;
+    z-index: 1000;
+}
+
 header .navbar {
     display: flex;
     padding: 10px;
@@ -106,6 +114,9 @@ header .navbar {
     }
 
     .navbar-menu a {
+        color: black;
+    }
+    .navbar-menu.active .navbar-item {
         color: black;
     }
 }
