@@ -31,7 +31,6 @@ header {
     
 }
 header .navbar-brand {
-    background: #1a5d94;
     display: flex;
     z-index: 0;
     top: 0;
@@ -273,6 +272,7 @@ header .navbar {
 }
 
 #curie-page {
+    scroll-behavior: smooth;
     padding: -20% 0 10%;
     gap: 2rem;             
     padding: 2rem;
@@ -286,6 +286,7 @@ header .navbar {
 }
 
 #einstein-page {
+    scroll-behavior: smooth;
     padding: 40% 0 10%;
     gap: 2rem;             
     padding: 2rem;
@@ -298,6 +299,7 @@ header .navbar {
 }
 
 #tesla-page {
+    scroll-behavior: smooth;
     padding: 20% 0 10%;
     gap: 2rem;             
     padding: 2rem;
