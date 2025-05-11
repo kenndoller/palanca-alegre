@@ -27,10 +27,11 @@ button {
 
 /* Header */
 header {
-}
 
+    
+}
 header .navbar-brand {
- 
+    background: #1a5d94;
     display: flex;
     z-index: 0;
     top: 0;
