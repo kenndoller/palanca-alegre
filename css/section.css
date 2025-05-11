@@ -24,6 +24,10 @@ header {
     background: #1a5d94;
 }
 
+.navbar {
+    position:fixed;
+}
+
 header .navbar {
     display: flex;
     padding: 10px;
@@ -75,7 +79,7 @@ header .navbar {
         top: 0px;
         left: -100%;
         width: 40%;
-        height: 100vh;
+        height: 1000vh;
         background-color: lightblue;
         transition: left 0.4s;
         overflow: hidden;

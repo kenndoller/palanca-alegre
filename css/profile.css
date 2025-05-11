@@ -29,6 +29,10 @@ header {
     background: #1a5d94;
 }
 
+.navbar {
+    position:fixed;
+}
+
 header .navbar {
     display: flex;
     padding: 10px;
@@ -108,7 +112,6 @@ header .navbar {
     .navbar-menu a {
         color: black;
     }
-
     .navbar-menu.active .navbar-item {
         color: black;
     }
