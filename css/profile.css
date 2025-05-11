@@ -26,11 +26,11 @@ button {
 
 /* Header */
 header {
-    position:fixed;
     background: #1a5d94;
 }
 
 .navbar {
+    background: #1a5d94;
     width: 100%;
     top: 0;
     position:fixed;
