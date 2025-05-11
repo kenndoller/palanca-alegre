@@ -34,6 +34,7 @@ header .navbar-brand {
     background: #1a5d94;
     display: flex;
     z-index: 0;
+    top: 0;
 }
 
 header .navbar {
@@ -106,7 +107,7 @@ header .navbar {
 
     .navbar-brand .logo {
         height: auto;
-        width: 80px;
+        width: 40px;
     }
 
     .navbar-menu.active {
@@ -131,88 +132,37 @@ header .navbar {
 }
 
 .section_picture {
-    width: 40%;
-    height: auto;
+    max-width: 40%;
 }
 
 #upper {
     max-width: 100%;
-    position: absolute;
-    z-index: 99;
 }
-
-.puzzles-slide {
-    position: relative;
-    height: 120vh;
-    overflow: hidden;
-  }
-  
-  .puzzles-slide-sub {
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    width: 100%;
-    z-index: 100; 
-    pointer-events: none;
-  }
-
-  .puzzle-pieces {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 109; 
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    margin-top: 30%;
-    margin-left: 50%;
-  }
-  
-  .img-pieces {
-    position: absolute; 
-    z-index: 107;
-    width: 150px;
-    height: auto;
-    transition: transform 0.3s ease;
-    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2));
-  }
-  .img-pieces:nth-child(1) {
-   
-    left: 30%;
-  }
-  
-  .img-pieces:nth-child(2) {
-    
-    left: -40%;
-  }
-  
-  .img-pieces:nth-child(3) {
-    
-    left: 40%;
-  }
-  
-  .img-pieces:nth-child(4) {
-   
-    left: -50%;
-  }
 
 /* Title */
 
 #alegre_title {
     position: absolute;
-    font-weight:900;
-    font-size: clamp(1.5rem, 6vw, 4rem);
+    font-weight: 900;
+    font-size: 4vw;
     font-family: "Patua One", serif;
-    color: rgb(255, 255, 255);
-    margin-top: 0%;
-    margin-left: 12%;
-    max-width: 80%;
-    z-index: 105;
+    color: white;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
     opacity: 0;
-    transform: translateY(30px); 
     transition: opacity 1.5s ease, transform 1.5s ease;
     text-align: center;
+    padding: 1rem;
 }
+
+.group_picture img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
 
 #alegre_title.animate-in {
     opacity: 1;
@@ -222,23 +172,65 @@ header .navbar {
 .group_picture-wrapper {
     opacity: 0;
     transition: opacity 0.8s ease-in-out;
+    width: 100%;
   }
   
-#alegre-photo {
-    max-width: 100%;
-    position: absolute;
-    z-index: 99;
-}
 
 .group_picture-wrapper.visible {
     opacity: 1;
 }
-
-
 .section_name_front {
     font-weight: 500;
     font-size: x-large;
 }
+
+.group_picture-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    #alegre_title {
+        font-size: 6vw;
+        padding: 0.5rem;
+    }
+
+    .group_picture-wrapper {
+        height: 80vh;
+    }
+}
+
+.group_picture-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.group_picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.group_picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
 .view_students {
 
@@ -281,7 +273,6 @@ header .navbar {
 }
 
 #curie-page {
-    scroll-behavior: smooth;
     padding: -20% 0 10%;
     gap: 2rem;             
     padding: 2rem;
@@ -295,7 +286,6 @@ header .navbar {
 }
 
 #einstein-page {
-    scroll-behavior: smooth;
     padding: 40% 0 10%;
     gap: 2rem;             
     padding: 2rem;
@@ -308,7 +298,6 @@ header .navbar {
 }
 
 #tesla-page {
-    scroll-behavior: smooth;
     padding: 20% 0 10%;
     gap: 2rem;             
     padding: 2rem;
@@ -509,7 +498,6 @@ header .navbar {
 .content {
     position: relative;
     z-index: 0;
-    margin-top: 10vh;
 }
 
 .cards-play {
@@ -633,21 +621,6 @@ header .navbar {
         height: auto;
         object-fit: contain;
     }
-} 
-@media (max-width: 768px) {
-    .group_picture-wrapper {
-        width: auto;
-        height: 100vh;
-        overflow: hidden;
-        display: flex;
-    }
-
-    .group_picture {
-        height: auto;
-        width: auto;
-    }
-
-
 
     .content {
         padding: 20px;
