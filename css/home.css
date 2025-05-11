@@ -573,13 +573,8 @@ header .navbar {
     word-wrap: break-word;
     word-break: break-word;
     text-align: center;
-
-  @media (max-width: 768px) {
-    .section_memories_msg {
-        font-size: 0.95rem;
-        padding: 1rem 0.5rem;
-    }
-}}
+ 
+}
 
 .sparkle-hover-3 {
     display: flex;
@@ -607,6 +602,21 @@ header .navbar {
     100% { background-position: -200% center; }
   } 
 
+  
+@media screen and (max-width: 600px) {
+    .section_memories_msg {
+        max-width: 95vw; /* override the default max-width */
+        width: 65vw;     /* explicitly set width too */
+        margin-top: 20vh;
+        margin-left: -12vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .cards-play-sub {
+        margin-left: 150vw;
+    }
+}
   
  .gradient-3-4 {
     position: relative;
@@ -786,5 +796,19 @@ header .navbar {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+    .img-layer-4 {
+        object-fit: contain;
+        margin-bottom: -3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .upper {
+        object-fit: contain;
+        margin-top: 10rem;
+    }
 }
   
