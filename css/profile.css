@@ -26,6 +26,7 @@ button {
 
 /* Header */
 header {
+    position:fixed;
     background: #1a5d94;
 }
 
